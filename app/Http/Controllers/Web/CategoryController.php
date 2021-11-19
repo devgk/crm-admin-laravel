@@ -36,6 +36,8 @@ class CategoryController extends Controller
             else Alert::toast($response,'error');
         }
 
+        /** Creating Database Column Structure
+         * to render database table */
         $datatable_columns = [
             [
                 'type'          => 'simple',
@@ -83,7 +85,9 @@ class CategoryController extends Controller
      * Datatable API for category listing
      */
     public function dataAjax(Request $request){
-        if ($request->ajax()) {            
+        if ($request->ajax()) {    
+            
+            // Query Category
             $category = ProductCategory::query()
             ->select(
                 'name',
@@ -92,6 +96,7 @@ class CategoryController extends Controller
                 DB::raw('(SELECT COUNT(*) FROM products WHERE products.category_id = product_categories.id) as product_count')
             );
 
+            // Create Datatable API response
             return Datatables::of($category)->toJson();
         }
     }

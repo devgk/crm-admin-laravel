@@ -19,11 +19,11 @@ Build on Laravel 8. PHP Version used ^8. Packages used are listed below:
 
 ### Testing The Application
 1. Database: Please open .env and set your database connection details and change the name of the database to your testing database.
-2. Run command **composer install* after cloning this project for the first time from the github.
+2. Run command *composer install* after cloning this project for the first time from the github.
    - Optionally run (*npm install* and npm run watch)
 3. Run *php artisan migrate* - to migrate the database
 4. Login to the application with the below specified user
    - Email: admin@cmsadmin.com
    - Password: I_@m_CMS_@dmin
 5. Use Sample DB (Import into mysql database for test data - optional)
-6. Run Test: **php artisan test*
+6. Run Test: *php artisan test*

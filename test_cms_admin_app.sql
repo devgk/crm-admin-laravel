@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 19, 2021 at 05:51 PM
+-- Generation Time: Nov 19, 2021 at 07:49 PM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 8.0.11
 
@@ -119,7 +119,9 @@ INSERT INTO `products` (`id`, `title`, `slug`, `description`, `image`, `price`, 
 (1, 'Peter England Mens Slim Shirt', 'peter-england-mens-slim-shirt', 'Peter England was founded in 1889, Londonderry, Ireland to provide British soldiers with fine Khaki trousers during the Boer War. More than a century later, Peter England made its foray into the Indian market in 1997.', 'product-images/peter-england-mens-slim-shirt-1637339584.jpg', 100, 1, '2021-11-19 11:03:04', '2021-11-19 11:03:04'),
 (2, 'Thisbe Womens Formal Shirt - Pack of 2', 'thisbe-womens-formal-shirt---pack-of-2', 'Shop from a wide range of Shirt from Thisbe. Perfect for your everyday use, you could pair it with a stylish pair of Jeans or Trousers complete the look.', 'product-images/thisbe-womens-formal-shirt---pack-of-2-1637339722.jpg', 140, 2, '2021-11-19 11:05:22', '2021-11-19 11:05:22'),
 (3, 'Classic Polo Mens Shirt', 'classic-polo-mens-shirt', 'The Classic Polo range today comprises T-shirts, Shirts, Trousers, jackets, sweaters, cargo\'s, denim, sportswear, loungewear thus making the brand a complete men’s wardrobe solution. Looking into the dynamics of the current day’s hyper exposed consumer preference, Classic Polo launches 3-4 new designs every day to fulfill the fashion appetite of the market.', 'product-images/classic-polo-mens-shirt-1637339794.jpg', 80, 1, '2021-11-19 11:06:34', '2021-11-19 11:06:34'),
-(4, 'Park Avenue Mens Shirt', 'park-avenue-mens-shirt', 'Make heads turn at work wearing this White formal shirt from the house of Park Avenue. Made of cotton, this slim-fit shirt features Ainsley collar, barrel cuff and full sleeves. Teaming it with formal trousers and leather shoes will make this shirt a class apart from others.', 'product-images/park-avenue-mens-shirt-1637339911.jpg', 90, 1, '2021-11-19 11:08:31', '2021-11-19 11:08:31');
+(4, 'Park Avenue Mens Shirt', 'park-avenue-mens-shirt', 'Make heads turn at work wearing this White formal shirt from the house of Park Avenue. Made of cotton, this slim-fit shirt features Ainsley collar, barrel cuff and full sleeves. Teaming it with formal trousers and leather shoes will make this shirt a class apart from others.', 'product-images/park-avenue-mens-shirt-1637339911.jpg', 90, 1, '2021-11-19 11:08:31', '2021-11-19 11:08:31'),
+(5, 'Baby T-Shirt', 'baby-t-shirt', 'Mom\'s Love Unisex Regular Baby and Toddler T-Shirt Set (Pack of 5)', NULL, 50, 3, '2021-11-19 13:02:54', '2021-11-19 13:02:54'),
+(6, 'Toddler T-Shirt', 'toddler-t-shirt', 'Mom\'s Love Boy\'s Regular Baby and Toddler T-Shirt Set (Pack of 3)', 'product-images/toddler-t-shirt-1637346842.jpg', 30, 3, '2021-11-19 13:04:02', '2021-11-19 13:04:02');
 
 -- --------------------------------------------------------
 
@@ -142,7 +144,8 @@ CREATE TABLE `product_categories` (
 
 INSERT INTO `product_categories` (`id`, `name`, `slug`, `description`, `created_at`, `updated_at`) VALUES
 (1, 'Mens T-Shirt', 'mens-t-shirt', 'Men\'s T-Shirt', '2021-11-19 10:52:58', '2021-11-19 10:52:58'),
-(2, 'Womens T-Shirt', 'womens-t-shirt', 'Women\'s T-Shirt', '2021-11-19 10:54:11', '2021-11-19 10:54:11');
+(2, 'Womens T-Shirt', 'womens-t-shirt', 'Women\'s T-Shirt', '2021-11-19 10:54:11', '2021-11-19 10:54:11'),
+(3, 'Babies Cloth', 'babies-cloth', 'Babies Cloth', '2021-11-19 13:01:38', '2021-11-19 13:01:38');
 
 -- --------------------------------------------------------
 
@@ -186,7 +189,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`, `role`) VALUES
-(1, 'admin', 'admin@cmsadmin.com', '2021-11-19 10:51:04', '$2y$10$PcJbHkxQD9Xe97n3Ld5LM.2a.wr682sq04/eyTHJYdkVBs7Bpg9uO', NULL, '2021-11-19 10:51:04', '2021-11-19 10:51:04', 1);
+(1, 'admin', 'admin@cmsadmin.com', '2021-11-19 10:51:04', '$2y$10$PcJbHkxQD9Xe97n3Ld5LM.2a.wr682sq04/eyTHJYdkVBs7Bpg9uO', 'QftfoycokiRW7Bileve1InBfClqyi2oREbEVJKzcP5hzKBF19ClxTSLfcEPO', '2021-11-19 10:51:04', '2021-11-19 10:51:04', 1);
 
 --
 -- Indexes for dumped tables
@@ -272,13 +275,13 @@ ALTER TABLE `personal_access_tokens`
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `product_categories`
 --
 ALTER TABLE `product_categories`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `roles`

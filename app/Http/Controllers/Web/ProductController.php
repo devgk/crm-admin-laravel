@@ -36,6 +36,8 @@ class ProductController extends Controller
             else Alert::toast($response,'error');
         }
 
+        /** Creating Database Column Structure
+         * to render database table */
         $datatable_columns = [
             [
                 'type'          => 'functional',
@@ -115,6 +117,7 @@ class ProductController extends Controller
     public function dataAjax(Request $request){
         if ($request->ajax()) {
 
+            // Query Product
             $products = Product::query()
                 ->join('product_categories', 'products.category_id', '=', 'product_categories.id')
                 ->select(
@@ -128,6 +131,7 @@ class ProductController extends Controller
                     'product_categories.name as category_name'
                 );
 
+            // Create Datatable API response
             return Datatables::of($products)->toJson();
         }
     }
