@@ -1,0 +1,58 @@
+.dataTables_length {
+    > label:first-child {
+        padding: 0;
+
+        select {
+            display: inline !important;
+            width: 120px;
+        }
+    }
+}
+
+.dataTables_filter {
+    text-align: right !important;
+
+    input {
+        display: inline !important;
+        width: 250px;
+        margin-left: 10px;
+    }
+}
+
+.dt-buttons {
+    padding: 10px;
+}
+
+.dataTables_paginate{
+    position: relative;
+    width: auto;
+    height: auto;
+    padding: 20px 0 !important;
+    overflow: auto;
+
+    .pagination{
+        position: relative;
+        float: right;
+        width: auto;
+        height: auto;
+        overflow: auto;
+        margin: 0;
+    }
+}
+
+.dataTables_info{
+    position: relative;
+    width: auto;
+    height: auto;
+    padding: 20px 0 !important;
+    overflow: auto;
+}
+
+img.thumbnail {
+    width: 70px;
+    border-radius: 4px;
+}
+
+.advance-datatables tbody td {
+    vertical-align: middle;
+}
